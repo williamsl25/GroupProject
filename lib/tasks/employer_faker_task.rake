@@ -5,7 +5,7 @@ task create_employers: :environment do
       name: Faker::Company.name,
       photo: Faker::Company.logo,
       bio: Faker::Lorem.paragraph(10),
-      industry: Faker::Company.catch_phrase,
+      industry: Faker::Commerce.department,
       size: Faker::Number.number(4),
       date_founded: Faker::Date.backward(150),
       email: Faker::Internet.email
