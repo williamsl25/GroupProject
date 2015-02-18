@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218210230) do
+ActiveRecord::Schema.define(version: 20150218213225) do
 
   create_table "degrees", force: :cascade do |t|
     t.date     "start_date"
@@ -76,9 +76,11 @@ ActiveRecord::Schema.define(version: 20150218210230) do
     t.string   "job_title",       limit: 255
     t.date     "job_post_date"
     t.text     "job_description", limit: 65535
-    t.text     "job_requirememt", limit: 65535
+    t.text     "job_requirement", limit: 65535
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "city",            limit: 255
+    t.string   "state",           limit: 255
   end
 
   create_table "skills", force: :cascade do |t|

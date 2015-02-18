@@ -5,7 +5,7 @@ class CreatePostings < ActiveRecord::Migration
       t.string :job_title
       t.date :job_post_date
       t.text :job_description
-      t.text :job_requirememt
+      t.text :job_requirement
 
       t.timestamps null: false
     end
