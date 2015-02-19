@@ -39,8 +39,19 @@ task create_graduates: :environment do
               Degree.create!({
                 start_date: Faker::Date.backward(30),
                 end_date: Faker::Date.backward(50),
-                degree_type: "associates",
-                concentration: "Engineering",
+                degree_type: [
+                  "Associates",
+                  "Bachelors",
+                  "Masters",
+                  "PhD"
+                  ].sample,
+                concentration: [
+                  "Engineering",
+                  "History",
+                  "Mathematics",
+                  "Philosophy",
+                  "English"
+                  ].sample,
               })
             ]
           })
